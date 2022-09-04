@@ -1,11 +1,18 @@
 # include <iostream>
 
 void displayBalance(double balance) {
-    std::cout << "Current Balance: " << balance << "\n";
+    std::cout << "Current Balance: " << balance << '\n';
 }
 
 double deposit(double balance) {
+    double amount;
 
+    std::cout << "Enter amount: ";
+    std::cin >> amount;
+
+    balance = balance + amount;
+
+    return balance;
 }
 
 int main() {
@@ -30,7 +37,8 @@ int main() {
             displayBalance(balance);
             break;
         case 2:
-            
+            balance = deposit(balance);
+            std::cout << "New balance: " << balance << '\n';
             break;
         case 3:
             
