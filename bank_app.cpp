@@ -15,6 +15,17 @@ double deposit(double balance) {
     return balance;
 }
 
+double withdraw(double balance) {
+    double amount;
+
+    std::cout << "Enter amount: ";
+    std::cin >> amount;
+
+    balance = balance - amount;
+
+    return balance;
+}
+
 int main() {
 
     double balance = 1000;
@@ -42,7 +53,8 @@ int main() {
             std::cout << "\nNew balance: " << balance << "\n\n";
             break;
         case 3:
-            
+            balance = withdraw(balance);
+            std::cout << "\nNew balance: " << balance << "\n\n";
             break;
         case 4:
             menu = 0;
