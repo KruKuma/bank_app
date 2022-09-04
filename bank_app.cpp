@@ -5,10 +5,19 @@ void displayBalance(double balance) {
 }
 
 double deposit(double balance) {
-    double amount;
+    double amount;   
 
-    std::cout << "Enter amount: ";
-    std::cin >> amount;
+    do
+    {
+        std::cout << "Enter amount: ";
+        std::cin >> amount;
+
+        if(amount <= 0) {
+            std::cout << "\n\nInvalid amount!!\n\n";
+        }
+        
+    }while (amount <= 0);
+    
 
     balance = balance + amount;
 
@@ -18,8 +27,16 @@ double deposit(double balance) {
 double withdraw(double balance) {
     double amount;
 
-    std::cout << "Enter amount: ";
-    std::cin >> amount;
+    do
+    {
+        std::cout << "Enter amount: ";
+        std::cin >> amount;
+
+        if(amount <= 0) {
+            std::cout << "\n\nInvalid amount!!\n\n";
+        }
+        
+    }while (amount <= 0);
 
     balance = balance - amount;
 
