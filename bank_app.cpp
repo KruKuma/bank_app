@@ -50,11 +50,11 @@ int main() {
             break;
         case 2:
             balance = deposit(balance);
-            std::cout << "\nNew balance: " << balance << "\n\n";
+            displayBalance(balance);
             break;
         case 3:
             balance = withdraw(balance);
-            std::cout << "\nNew balance: " << balance << "\n\n";
+            displayBalance(balance);
             break;
         case 4:
             menu = 0;
