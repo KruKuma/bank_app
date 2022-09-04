@@ -1,7 +1,7 @@
 # include <iostream>
 
 void displayBalance(double balance) {
-    std::cout << "Current Balance: " << balance << '\n';
+    std::cout << "\nCurrent Balance: " << balance << "\n\n";
 }
 
 double deposit(double balance) {
@@ -29,6 +29,7 @@ int main() {
         std::cout << "2. Deposit\n";
         std::cout << "3. Withdraw\n";
         std::cout << "4. Quit\n";
+        std::cout << "Enter choice: ";
         std::cin >> choice;
 
         switch (choice)
@@ -38,7 +39,7 @@ int main() {
             break;
         case 2:
             balance = deposit(balance);
-            std::cout << "New balance: " << balance << '\n';
+            std::cout << "\nNew balance: " << balance << "\n\n";
             break;
         case 3:
             
