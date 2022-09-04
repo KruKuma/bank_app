@@ -12,6 +12,9 @@ double deposit(double balance) {
         std::cout << "Enter amount: ";
         std::cin >> amount;
 
+        std::cin.clear();
+        fflush(stdin);
+
         if(amount <= 0) {
             std::cout << "\n\nInvalid amount!!\n\n";
         }
@@ -31,6 +34,9 @@ double withdraw(double balance) {
     {
         std::cout << "Enter amount: ";
         std::cin >> amount;
+
+        std::cin.clear();
+        fflush(stdin);
 
         if(amount <= 0) {
             std::cout << "\n\nInvalid amount!!\n\n";
@@ -59,6 +65,9 @@ int main() {
         std::cout << "4. Quit\n";
         std::cout << "Enter choice: ";
         std::cin >> choice;
+
+        std::cin.clear();
+        fflush(stdin);
 
         switch (choice)
         {
